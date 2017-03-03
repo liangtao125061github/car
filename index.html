@@ -525,18 +525,18 @@
 	</div>
 	<script type="text/javascript">
 		// 滑动
-		$(document).bind("mousedown", function(event) {
+		$(document).on("mousedown", function(event) {
 		    mouse_down_x = event.pageX;
 		    mouse_down_y = event.pageY;
 		    
 		    // console.log('mousedown:' + mouse_down_x,mouse_down_y); 
-		    // return false; 
+		    return false; 
 		});
 
 		
 		var currIndex = 0;
 		  
-	  	$(document).bind("mouseup",function(event){
+	  	$(document).on("mouseup",function(event){
 	    	mouse_up_x = event.pageX;
 	    	mouse_up_y = event.pageY;
 
@@ -572,7 +572,7 @@
 	        	}
 	        	// console.log(currIndex);
 	        }
-	    	// return false;
+	    	return false;
 	  	});
 	</script>
 	<div class="foot-service clear" style="height: auto;">
