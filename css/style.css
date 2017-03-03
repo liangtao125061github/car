@@ -1,0 +1,170 @@
+body{
+	font-family: "microsoft yahei";
+    color: #666;
+    font-size: 14px;
+}
+/*选择车型*/
+
+.header {
+	display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f9f9f9;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    z-index: 99;
+     
+}
+.header .sub-title{
+	display: block;
+	line-height: 44px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 200;
+}
+.header-back {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url(../images/arrow_l_h.png) center center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    text-indent: -1000px;
+    background-size: 25% auto;
+}
+/*热门品牌*/
+#rmpp{
+	margin-top: 44px;
+    margin-bottom: 0px;
+}
+p.commp {
+	display: block;
+    padding: 8px 2% 2px 2%;
+    color: #808080;
+    font-size: 1.05rem;
+}
+.select_car_title {
+    line-height: 26px;
+}
+.hotBrand {
+    height: 64px;
+    padding: 8px 0;
+    overflow: auto;
+    background: #fff;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+}
+.hotBrand li {
+    float: left;
+    height: 64px;
+    width: 64px;
+    text-align: center;
+}
+.hotBrand li>img {
+    display: block;
+    margin: 0 auto;
+    width: 42px;
+    height: 42px;
+}
+/*品牌的列表*/
+.car_list_items {
+    overflow: hidden;
+}
+.select_car_list {
+    overflow-y: auto;
+}
+.pr {
+    position: relative;
+}
+.c {
+    clear: both;
+}
+.brandBox {
+    background: #F3F3F3;
+}
+.brandBox ul {
+    background: #fff;
+    overflow: hidden;
+    border-top: solid 1px #ccc;
+}
+.brandBox ul li {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: solid 1px #ccc;
+    width: 96%;
+    padding: 8px 2%;
+}
+.brandBox ul li img {
+    height: 42px;
+    width: 42px;
+    border: solid 1px #ccc;
+    display: block;
+    float: left;
+    margin-right: 8px;
+}
+/*右侧锚点*/
+.word-items {
+    width: 20px;
+    position: fixed;
+    right: 0;
+    top: 44px;
+    z-index: 9999;
+}
+.word-items a {
+    display: block;
+    line-height: 18px;
+    font-size: 13px;
+    color: #019ae6;
+    text-align: center;
+}
+/*具体车型*/
+.brandBox ul {
+    background: #fff;
+    overflow: hidden;
+    border-top: solid 1px #ccc;
+}
+.brandBox ul li {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: solid 1px #ccc;
+    width: 96%;
+    padding: 8px 2%;
+}
+#brandList {
+    width: 100%;
+    top: 45px;
+    right: 0;
+    border-left: solid #ccc 1px;
+    position: absolute;
+    z-index: 8;
+}
+#brandList ul li img {
+    width: 54px;
+}
+/*右侧关闭按钮*/
+#closebL {
+    position: fixed;
+    top: 46px;
+    right: 0;
+    z-index: 9;
+    opacity: 0.6;
+    color: #666;
+    font-size: 14px;
+}
+.closeico {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: url(../images/car_logo/close.png) center center no-repeat;
+    background-size: 80% auto;
+}
+/*隐藏*/
+.hide {
+    display: none;
+}
