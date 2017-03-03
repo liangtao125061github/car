@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		// $(document).bind("mousedown", function(event) {
+		//     mouse_down_x = event.pageX;
+		//     mouse_down_y = event.pageY;
+
+		//     console.log('mousedown:' + mouse_down_x,mouse_down_y);
+		     
+		// });
+
+		// var currIndex = 0;
+	 //  	$(document).bind("mouseup",function(event){
+	 //    	mouse_up_x = event.pageX;
+	 //    	mouse_up_y = event.pageY;
+
+	 //    	console.log('mouseup:' + mouse_down_x,mouse_down_y);
+
+	 //    	var mouse = mouse_up_x - mouse_down_x;
+
+	 //    	var imageCount = $('ul li').length;
+	 //    	// console.log(imageCount);
+
+		//     if(mouse > 0) {
+	 //          $('ul li:visible').css('display','none').next().css('display','block');
+	 //        	currIndex ++;
+	 //        	// console.log(currIndex);
+
+	 //        	if (currIndex > imageCount - 1) {
+
+		// 			currIndex = 0;
+		// 			$('ul li:first').css('display','block');
+	 //        	}
+
+		        
+	 //        } else if(mouse < 0){
+	 //        	$('ul li:visible').css('display','none').prev().css('display','block');
+	 //        	currIndex --;
+	 //        	// console.log(currIndex);
+
+	 //        	if (currIndex < 0) {
+
+		// 			currIndex = imageCount - 1;
+		// 			$('ul li:last').css('display','block');
+	 //        	}
+	 //        	// console.log(currIndex);
+	 //        }
+	 //    	return false;
+	    	
+	 //  	});
+
+	  	function getTouch(e){
+                console.log(1111);
+	            var touch = e.pageX;
+                // console.log(touch);
+	            if(touch.type == 'touchstart' || touch.type == 'touchend'){
+                    console.log(222);
+	                if(e.originalEvent.changedTouches && e.originalEvent.changedTouches.length){
+	                    // touch = e.originalEvent.changedTouches[0];
+	                    touch = e.pageX.changedTouches[0];
+	                }else{
+                        // console.log(333);
+	                    touch = null;
+	                }
+	            }
+	            return touch
+	        }
+	        //判断手指滑动方向
+	        var startX,startY,endX,endY;
+	        $(document).on('touchstart mousedown', function (e) {
+                console.log('mousedown' + ',' + 'touchstart' );
+	            var touch = getTouch(e);
+	            if (touch) {
+	                //var touch = e.originalEvent.changedTouches[0];
+	                startX = touch.clientX;
+	                startY = touch.clientY;
+	                return false;
+	            }
+	        }).on('touchend mouseup', function (e) {
+	            var touch = getTouch(e);
+	            if (touch) {
+	                //var touch = e.originalEvent.changedTouches[0];
+	                endX = touch.clientX;
+	                endY = touch.clientY;
+
+	                if((endX - startX) > 15){
+	                    //向左滑
+	                    $('ul li:last-child').show().prependTo('.car-part-ul').siblings().hide();
+	                    //$('.car-part-ul li:last-child').css('z-index',5).prependTo('.car-part-ul').siblings().css('z-index',-10);
+	                }
+	                if((startX - endX) > 15){
+	                    //向右滑
+	                    var $liFirst = $('ul li:first-child');
+	                    $liFirst.appendTo('ul').hide();
+	                    $('ul li:first-child').show();
+	                    //$liFirst.appendTo('.car-part-ul').css('z-index',-10);
+	                    //$('.car-part-ul li:first-child').css('z-index',5)
+	                }
+	            }
+	        });
+
+	</script>
+
+
+</head>
+<body>
+	<ul style="font-size: 60px;">
+		<li style="display: block;">11111</li>
+		<li style="display: none;">22222</li>
+		<li style="display: none;">33333</li>
+		<li style="display: none;">44444</li>
+	</ul>
+</body>
+</html>
