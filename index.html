@@ -524,21 +524,43 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+        function getTouch(e){
+            var touch = e.originalEvent;
+            if(touch.type == 'touchstart' || touch.type == 'touchend'){
+                if(e.originalEvent.changedTouches && e.originalEvent.changedTouches.length){
+                    touch = e.originalEvent.changedTouches[0];
+                }else{
+                    touch = null;
+                }
+            }
+            return touch;
+        }
 		// 滑动
-		$(document).on("mousedown", function(event) {
-		    mouse_down_x = event.pageX;
-		    mouse_down_y = event.pageY;
+		$(document).on("mousedown", function(e) {
+            var touch = getTouch(e);
+            if(touch) {
+               mouse_down_x = touch.clientX;
+                mouse_down_y = touch.clientY;
+                return false; 
+            }
+
+		    // mouse_down_x = event.pageX;
+		    // mouse_down_y = event.pageY;
 		    
 		    // console.log('mousedown:' + mouse_down_x,mouse_down_y); 
-		    return false; 
+		    // return false; 
 		});
 
 		
 		var currIndex = 0;
 		  
-	  	$(document).on("mouseup",function(event){
-	    	mouse_up_x = event.pageX;
-	    	mouse_up_y = event.pageY;
+	  	$(document).on("mouseup",function(e){
+            var touch = getTouch(e);
+            if(touch) {
+
+
+	    	mouse_up_x = touch.clientX;
+	    	mouse_up_y = touch.clientY;
 
 	    	// console.log('mousedown:' + mouse_down_x,mouse_down_y);
 	    	// console.log('mouseup:' + mouse_up_x,mouse_up_y);
@@ -573,6 +595,7 @@
 	        	// console.log(currIndex);
 	        }
 	    	return false;
+            }
 	  	});
 	</script>
 	<div class="foot-service clear" style="height: auto;">
