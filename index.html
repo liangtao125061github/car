@@ -524,80 +524,63 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-        function getTouch(e){
-            var touch = e.originalEvent;
-            if(touch.type == 'touchstart' || touch.type == 'touchend'){
-                if(e.originalEvent.changedTouches && e.originalEvent.changedTouches.length){
-                    touch = e.originalEvent.changedTouches[0];
-                }else{
-                    touch = null;
-                }
-            }
-            return touch;
-        }
-		// 滑动
-		$(document).on("mousedown", function(e) {
-            var touch = getTouch(e);
-            if(touch) {
-               mouse_down_x = touch.clientX;
-                mouse_down_y = touch.clientY;
-                return false; 
-            }
+        // document.addEventListener('touchmove', function(event) {
+        //     event.preventDefault();
+        // }, false);
+      // 滑动
+      $(document).on("touchstart mousedown", function(event) {
+                console.log("mousedown");
+          mouse_down_x = event.originalEvent.changedTouches[0].clientX;
+          // mouse_down_y = event.clientY;
+          
+          // console.log('mousedown:' + mouse_down_x,mouse_down_y); 
+          return false; 
+      });
 
-		    // mouse_down_x = event.pageX;
-		    // mouse_down_y = event.pageY;
-		    
-		    // console.log('mousedown:' + mouse_down_x,mouse_down_y); 
-		    // return false; 
-		});
+      
+      var currIndex = 0;
+        
+        $(document).on("touchend mouseup",function(event){
+                console.log("mouseup");
+          mouse_up_x = event.originalEvent.changedTouches[0].clientX;
+          // mouse_up_y = event.clientY;
 
-		
-		var currIndex = 0;
-		  
-	  	$(document).on("mouseup",function(e){
-            var touch = getTouch(e);
-            if(touch) {
+          console.log(mouse_up_x,mouse_down_x);
 
+          var mouse = mouse_up_x - mouse_down_x;
+                
+          var imageCount = $('.cart-part-ul li').length;
+          // console.log(imageCount);
+                console.log(mouse);
+          if(mouse > 0) {
+                    console.log("mouse＞0");
+               $('.cart-part-ul li:visible').css('display','none').next().css('display','block');
+              currIndex ++;
+              // console.log(currIndex);
 
-	    	mouse_up_x = touch.clientX;
-	    	mouse_up_y = touch.clientY;
+              if (currIndex > imageCount - 1) {
 
-	    	// console.log('mousedown:' + mouse_down_x,mouse_down_y);
-	    	// console.log('mouseup:' + mouse_up_x,mouse_up_y);
+         currIndex = 0;
+         $('.cart-part-ul li:first').css('display','block');
+              }
 
-	    	var mouse = mouse_up_x - mouse_down_x;
+              
+             } else if(mouse < 0){
+                    console.log("mouse＜0");
+              $('.cart-part-ul li:visible').css('display','none').prev().css('display','block');
+              currIndex --;
+              // console.log(currIndex);
 
-	    	var imageCount = $('.cart-part-ul li').length;
-	    	// console.log(imageCount);
+              if (currIndex < 0) {
 
-		    if(mouse > 0) {
-	          $('.cart-part-ul li:visible').css('display','none').next().css('display','block');
-	        	currIndex ++;
-	        	// console.log(currIndex);
-
-	        	if (currIndex > imageCount - 1) {
-
-					currIndex = 0;
-					$('.cart-part-ul li:first').css('display','block');
-	        	}
-
-		        
-	        } else if(mouse < 0){
-	        	$('.cart-part-ul li:visible').css('display','none').prev().css('display','block');
-	        	currIndex --;
-	        	// console.log(currIndex);
-
-	        	if (currIndex < 0) {
-
-					currIndex = imageCount - 1;
-					$('.cart-part-ul li:last').css('display','block');
-	        	}
-	        	// console.log(currIndex);
-	        }
-	    	return false;
-            }
-	  	});
-	</script>
+         currIndex = imageCount - 1;
+         $('.cart-part-ul li:last').css('display','block');
+              }
+              // console.log(currIndex);
+             }
+          return false;
+        });
+    </script>
 	<div class="foot-service clear" style="height: auto;">
         <div class="center">
 	        <input class="btn-next" id="addtocart" value="下一步" type="button">
