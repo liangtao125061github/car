@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div {
+			width: 200px;
+			height: 200px;
+			border: 1px solid #eee;
+			background: red;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).bind("mousedown", function(event) {
+		    mouse_down_x = event.pageX;
+		    mouse_down_y = event.pageY;
+		    $("#div").css("background-color","red");
+		     
+		});
+
+		  
+	  	$(document).bind("mouseup",function(event){
+	    	mouse_up_x = event.pageX;
+	    	mouse_up_y = event.pageY;
+
+	    	$("#div").css("height","300px");
+
+	    	
+	  	});
+	</script>
+</head>
+<body>
+	<div id="div"></div>
+</body>
+</html>
