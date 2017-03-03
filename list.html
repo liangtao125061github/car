@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择车辆</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>	
+</head>
+<body>
+	<!-- 选择车辆 -->
+	<div class="header">
+		<h1 class="sub-title color-black">选择车型</h1>
+		<a class="header-back" href="javascript:void(0);">返回</a>
+	</div>
+	<!-- 选择车辆结束 -->
+	<!-- 热门品牌 -->
+	<p class="commp select_car_title" id="rmpp">热门品牌</p>
+	<!-- 热门品牌车系 -->
+	<div style="width: 100%; overflow: hidden;">
+	    <div class="hotBrand c">
+	        <ul class="lil" id="hotlist">
+	        	<li data-brand_code="BRAD0000001">
+	        		<img src="images/car_logo/20140901162201666_.jpg" alt="">奥迪
+	        	</li>
+	        	<li data-brand_code="BRAD0000011">
+	        		<img src="images/car_logo/20140901162543960_.jpg" alt="">保时捷
+	        	</li>
+	        	<li data-brand_code="BRAD0000003">
+	        		<img src="images/car_logo/20140901162809412_.jpg" alt="">奔驰
+	        	</li>
+	        	<li data-brand_code="BRAD0000002">
+	        		<img src="images/car_logo/20140901162825923_.jpg" alt="">宝马
+	        	</li>
+	        	<li data-brand_code="BRAD0000022">
+	        		<img src="images/car_logo/20140901165356973_.jpg" alt="">大众
+	        	</li>
+	        	<li data-brand_code="BRAD0000061">
+	        		<img src="images/car_logo/20140902111720978_.jpg" alt="">路虎
+	        	</li>
+	        </ul>
+	    </div>
+	</div>
+	<!-- 热门品牌车系结束 -->
+	<!-- 车辆列表 -->
+	<div class="car_list_items">
+		<div class="pr c select_car_list">
+        <!--品牌的列表-->
+        	<!-- A系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="A">A</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000017">
+	                	<img src="images/car_logo/20140901162102849_.jpg" alt="">AMG                
+	                </li>
+                	<li data-brand_code="BRAD0000006">
+                		<img src="images/car_logo/201409011621195_.jpg" alt="">阿尔法罗密欧                
+                	</li>
+                	<li data-brand_code="BRAD0000005">
+                		<img src="images/car_logo/20140901162139774_.jpg" alt="">阿斯顿-马丁                
+                	</li>
+                	<li data-brand_code="BRAD0000001">
+                		<img src="images/car_logo/20140901162201666_.jpg" alt="">奥迪                
+                	</li>            
+                </ul>
+	        </div>
+	        <!-- B系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="B">B</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000172">
+	                	<img src="images/brand.jpg" alt="">宝沃                
+	                </li>
+	                <li data-brand_code="BRAD0000142">
+	                	<img src="images/brand.jpg" alt="">北汽新能源                
+	                </li>
+	                <li data-brand_code="BRAD0000141">
+	                	<img src="images/brand.jpg" alt="">北京                
+	                </li>
+	                <li data-brand_code="BRAD0000139">
+	                	<img src="images/brand.jpg" alt="">巴博斯                
+	                </li>
+	                <li data-brand_code="BRAD0000115">
+	                	<img src="images/brand.jpg" alt="">北汽绅宝                
+	                </li>
+	                <li data-brand_code="BRAD0000114">
+	                	<img src="images/brand.jpg" alt="">北汽幻速                
+	                </li>
+	                <li data-brand_code="BRAD0000105">
+	                	<img src="images/car_logo/20140901162237693_.jpg" alt="">北汽威旺                
+	                </li>
+	                <li data-brand_code="BRAD0000103">
+	                	<img src="images/car_logo/20140901162310437_.jpg" alt="">宝骏                
+	                </li>
+	                <li data-brand_code="BRAD0000089">
+	                	<img src="images/car_logo/20140902125539840_.jpg" alt="">奔腾                
+	                </li>
+	                <li data-brand_code="BRAD0000014">
+	                	<img src="images/car_logo/20140901162429432_.jpg" alt="">布加迪                
+	                </li>
+	                <li data-brand_code="BRAD0000013">
+	                	<img src="images/car_logo/20140901162450412_.jpg" alt="">宾利                
+	                </li>
+	                <li data-brand_code="BRAD0000012">
+	                	<img src="images/car_logo/20140901162506595_.jpg" alt="">比亚迪                
+	                </li>
+	                <li data-brand_code="BRAD0000011">
+	                	<img src="images/car_logo/20140901162543960_.jpg" alt="">保时捷                
+	                </li>
+	                <li data-brand_code="BRAD0000010">
+	                	<img src="images/car_logo/20140901162623320_.jpg" alt="">北汽制造                
+	                </li>
+	                <li data-brand_code="BRAD0000009">
+	                	<img src="images/car_logo/20140901162656648_.jpg" alt="">别克                
+	                </li>
+	                <li data-brand_code="BRAD0000008">
+	                	<img src="images/car_logo/20140901162715989_.jpg" alt="">标致                
+	                </li>
+	                <li data-brand_code="BRAD0000007">
+	                	<img src="images/car_logo/20140901162737859_.jpg" alt="">本田                
+	                </li>
+	                <li data-brand_code="BRAD0000003">
+	                	<img src="images/car_logo/20140901162809412_.jpg" alt="">奔驰                
+	                </li>
+	                <li data-brand_code="BRAD0000002">
+	                	<img src="images/car_logo/20140901162825923_.jpg" alt="">宝马                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- C系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="C">C</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000150">
+	                	<img src="images/brand.jpg" alt="">成功汽车                
+	                </li>
+	                <li data-brand_code="BRAD0000124">
+	                	<img src="images/brand.jpg" alt="">长安商用                
+	                </li>
+	                <li data-brand_code="BRAD0000104">
+	                	<img src="images/car_logo/20140901163857704_.jpg" alt="">长安标致雪铁龙DS                
+	                </li>
+	                <li data-brand_code="BRAD0000019">
+	                	<img src="images/car_logo/20140901164318222_.jpg" alt="">长丰猎豹                
+	                </li>
+	                <li data-brand_code="BRAD0000018">
+	                	<img src="images/car_logo/20140901164333198_.jpg" alt="">长城                
+	                </li>
+	                <li data-brand_code="BRAD0000016">
+	                	<img src="images/car_logo/20140901164355939_.jpg" alt="">长安                
+	                </li>
+	                <li data-brand_code="BRAD0000015">
+	                	<img src="images/car_logo/20140901164410966_.jpg" alt="">昌河汽车                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- D系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="D">D</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000155">
+	                	<img src="images/brand.jpg" alt="">DS                
+	                </li>
+	                <li data-brand_code="BRAD0000136">
+	                	<img src="images/brand.jpg" alt="">东风风度                
+	                </li>
+	                <li data-brand_code="BRAD0000135">
+	                	<img src="images/brand.jpg" alt="">东方                
+	                </li>
+	                <li data-brand_code="BRAD0000133">
+	                	<img src="images/brand.jpg" alt="">东风小康                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- F系列 -->
+			<div class="brandBox brandBox2">
+	            <p class="commp" id="F">F</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000171">
+	                	<img src="images/brand.jpg" alt="">菲斯克                
+	                </li>
+	                <li data-brand_code="BRAD0000166">
+	                	<img src="images/brand.jpg" alt="">福汽启腾                
+	                </li>
+	                <li data-brand_code="BRAD0000097">
+	                	<img src="images/car_logo/20140901165636986_.jpg" alt="">福特                
+	                </li>
+	                <li data-brand_code="BRAD0000033">
+	                	<img src="images/car_logo/20140901165657650_.jpg" alt="">法拉利                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- G系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="G">G</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000151">
+	                	<img src="images/brand.jpg" alt="">光冈                
+	                </li>
+	                <li data-brand_code="BRAD0000119">
+	                	<img src="images/brand.jpg" alt="">广汽传祺                
+	                </li>
+	                <li data-brand_code="BRAD0000116">
+	                	<img src="images/brand.jpg" alt="">观致                
+	                </li>
+	                <li data-brand_code="BRAD0000108">
+	                	<img src="images/car_logo/20140901170125209_.jpg" alt="">GMC                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- H系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="H">H</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000169">
+	                	<img src="images/brand.jpg" alt="">华北                
+	                </li>
+	                <li data-brand_code="BRAD0000168">
+	                	<img src="images/brand.jpg" alt="">航天                
+	                </li>
+	                <li data-brand_code="BRAD0000167">
+	                	<img src="images/brand.jpg" alt="">华翔                
+	                </li>
+	                <li data-brand_code="BRAD0000157">
+	                	<img src="images/brand.jpg" alt="">海格                
+	                </li>
+	                <li data-brand_code="BRAD0000154">
+	                	<img src="images/brand.jpg" alt="">恒天                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- J系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="J">J</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000149">
+	                	<img src="images/brand.jpg" alt="">金龙                
+	                </li>
+	                <li data-brand_code="BRAD0000145">
+	                	<img src="images/brand.jpg" alt="">江铃                
+	                </li>
+	                <li data-brand_code="BRAD0000128">
+	                	<img src="images/brand.jpg" alt="">吉奥                
+	                </li>
+	                <li data-brand_code="BRAD0000122">
+	                	<img src="images/brand.jpg" alt="">金杯                
+	                </li>
+	                <li data-brand_code="BRAD0000109">
+	                	<img src="images/brand.jpg" alt="">吉利                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- K系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="K">K</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000161">
+	                	<img src="images/brand.jpg" alt="">卡升                
+	                </li>
+	                <li data-brand_code="BRAD0000148">
+	                	<img src="images/brand.jpg" alt="">卡威                
+	                </li>
+	                <li data-brand_code="BRAD0000147">
+	                	<img src="images/brand.jpg" alt="">卡尔森                
+	                </li>
+	                <li data-brand_code="BRAD0000144">
+	                	<img src="images/brand.jpg" alt="">KTM                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- L系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="L">L</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000156">
+	                	<img src="images/brand.jpg" alt="">雷丁                
+	                </li>
+	                <li data-brand_code="BRAD0000143">
+	                	<img src="images/brand.jpg" alt="">劳伦士                
+	                </li>
+	                <li data-brand_code="BRAD0000140">
+	                	<img src="images/brand.jpg" alt="">路特斯                
+	                </li>
+	                <li data-brand_code="BRAD0000138">
+	                	<img src="images/brand.jpg" alt="">陆地方舟                
+	                </li>
+	                <li data-brand_code="BRAD0000126">
+	                	<img src="images/brand.jpg" alt="">猎豹汽车                
+	                </li>
+	                <li data-brand_code="BRAD0000120">
+	                	<img src="images/brand.jpg">拉达                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- M系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="M">M</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000158">
+	                	<img src="images/brand.jpg" alt="">MINI                
+	                </li>
+	                <li data-brand_code="BRAD0000152">
+	                	<img src="images/brand.jpg" alt="">摩根                
+	                </li>
+	                <li data-brand_code="BRAD0000131">
+	                	<img src="images/brand.jpg" alt="">迈凯伦                
+	                </li>
+	                <li data-brand_code="BRAD0000064">
+	                	<img src="images/car_logo/20140902113826532_.jpg" alt="">迷你                
+	                </li>
+	                <li data-brand_code="BRAD0000063">
+	                	<img src="images/car_logo/20140902113844192_.jpg" alt="">迈巴赫                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- N系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="N">N</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000110">
+	                	<img src="images/car_logo/20140902115417253_.jpg" alt="">纳智捷                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- O系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="O">O</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000101">
+	                	<img src="images/car_logo/20140902133008318_.jpg" alt="">欧宝                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- P系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="P">P</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000170">
+	                	<img src="images/brand.jpg" alt="">帕加尼                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- Q系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="Q">Q</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000118">
+	                	<img src="images/brand.jpg" alt="">启辰                
+	                </li>
+	                <li data-brand_code="BRAD0000113">
+	                	<img src="images/brand.jpg" alt="">南京菲亚特                
+	                </li>
+	                <li data-brand_code="BRAD0000068">
+	                	<img src="images/car_logo/20140902133303698_.jpg" alt="">奇瑞                
+	                </li>
+	                <li data-brand_code="BRAD0000067">
+	                	<img src="images/car_logo/20140902133209259_.jpg" alt="">起亚                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- R系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="R">R</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000159">
+	                	<img src="images/brand.jpg" alt="">如虎                
+	                </li>
+	                <li data-brand_code="BRAD0000100">
+	                	<img src="images/car_logo/20140902132951746_.jpg" alt="">荣威                
+	                </li>
+	                <li data-brand_code="BRAD0000070">
+	                	<img src="images/car_logo/20140902133020199_.jpg" alt="">瑞麒                
+	                </li>
+	                <li data-brand_code="BRAD0000069">
+	                	<img src="images/car_logo/20140902133045275_.jpg" alt="">日产                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- S系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="S">S</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000164">
+	                	<img src="images/brand.jpg" alt="">赛麟                
+	                </li>
+	                <li data-brand_code="BRAD0000080">
+	                	<img src="images/car_logo/20140902131947590_.jpg" alt="">斯巴鲁                
+	                </li>
+	                <li data-brand_code="BRAD0000079">
+	                	<img src="images/car_logo/20140902132019399_.jpg" alt="">双龙                
+	                </li>
+	                <li data-brand_code="BRAD0000078">
+	                	<img src="images/car_logo/20140902132045754_.jpg" alt="">世爵                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- T系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="T">T</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000163">
+	                	<img src="images/brand.jpg" alt="">通田                
+	                </li>
+	                <li data-brand_code="BRAD0000162">
+	                	<img src="images/brand.jpg" alt="">泰卡特                
+	                </li>
+	                <li data-brand_code="BRAD0000112">
+	                	<img src="images/car_logo/20140902131124562_.jpg" alt="">特斯拉                
+	                </li>            
+	            </ul>
+	        </div>
+	        <!-- W系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="W">W</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000160">
+	                	<img src="images/brand.jpg" alt="">五十铃                
+	                </li>
+	                <li data-brand_code="BRAD0000121">
+	                	<img src="images/brand.jpg" alt="">潍柴英致                
+	                </li>
+	                <li data-brand_code="BRAD0000096">
+	                	<img src="images/car_logo/20140902130429558_.jpg" alt="">沃尔沃                
+	                </li>
+	                <li data-brand_code="BRAD0000084">
+	                	<img src="images/car_logo/20140902130452689_.jpg" alt="">五菱                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- X系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="X">X</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000165">
+	                	<img src="images/brand.jpg" alt="">新凯                
+	                </li>
+	                <li data-brand_code="BRAD0000088">
+	                	<img src="images/car_logo/20140902130110574_.jpg" alt="">西雅特                
+	                </li>
+	                <li data-brand_code="BRAD0000087">
+	                	<img src="images/car_logo/20140902130137701_.jpg" alt="">雪铁龙                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- Y系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="Y">Y</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000153">
+	                	<img src="images/brand.jpg" alt="">依维柯                
+	                </li>
+	                <li data-brand_code="BRAD0000129">
+	                	<img src="images/brand.jpg" alt="">一汽                
+	                </li>
+	                <li data-brand_code="BRAD0000123">
+	                	<img src="images/brand.jpg" alt="">亚琛施纳泽                
+	                </li>
+	                <li data-brand_code="BRAD0000117">
+	                	<img src="images/brand.jpg" alt="">野马汽车                
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- Z系列 -->
+	        <div class="brandBox brandBox2">
+	            <p class="commp" id="Z">Z</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000125">
+	                	<img src="images/brand.jpg" alt="">知豆                
+	                </li>
+	                <li data-brand_code="BRAD0000098">
+	                	<img src="images/car_logo/20140902113045345_.jpg" alt="">讴歌                
+	                </li>
+	                <li data-brand_code="BRAD0000094">
+	                	<img src="images/car_logo/20140902111705149_.jpg" alt="">众泰                
+	                </li>
+	                <li data-brand_code="BRAD0000039">
+	                	<img src="images/car_logo/20140902104059622_.jpg" alt="">中华                
+	                </li>
+	            </ul>
+	        </div>
+			<!-- ZZ系列 -->
+			<div class="brandBox brandBox2">
+	            <p class="commp" id="ZZ">ZZ</p>
+	            <ul>
+	                <li data-brand_code="BRAD0000102">
+	                	<img src="images/brand.jpg" alt="">其它                
+	                </li>            
+	            </ul>
+	        </div>
+	    </div>
+	    <!--品牌的列表结束-->
+	</div>
+	<!-- 车辆列表结束 -->
+	<!-- 右侧锚点链接 -->
+	<div class="word-items" id="word_items">
+	    <a href="#rmpp" data-word="rmpp">热</a>
+	    <a href="#A" data-word="A">A</a>
+	    <a href="#B" data-word="B">B</a>
+	    <a href="#C" data-word="C">C</a>
+	    <a href="#D" data-word="D">D</a>
+	    <a href="#F" data-word="F">F</a>
+	    <a href="#G" data-word="G">G</a>
+	    <a href="#H" data-word="H">H</a>
+	    <a href="#J" data-word="J">J</a>
+	    <a href="#K" data-word="K">K</a>
+	    <a href="#L" data-word="L">L</a>
+	    <a href="#M" data-word="M">M</a>
+	    <a href="#N" data-word="N">N</a>
+	    <a href="#O" data-word="O">O</a>
+	    <a href="#P" data-word="P">P</a>
+	    <a href="#Q" data-word="Q">Q</a>
+	    <a href="#R" data-word="R">R</a>
+	    <a href="#S" data-word="S">S</a>
+	    <a href="#T" data-word="T">T</a>
+	    <a href="#W" data-word="W">W</a>
+	    <a href="#X" data-word="X">X</a>
+	    <a href="#Y" data-word="Y">Y</a>
+	    <a href="#Z" data-word="Z">Z</a>
+	    <a href="#ZZ" data-word="ZZ">ZZ</a>
+	</div>	
+	<!-- 右侧锚点链接结束 -->
+	<!-- 车辆具体型号列表 -->
+	<div id="brandList" class="hide brandBox" style="overflow: auto; height: 610px;">
+        <div data-brand_id="BRAD0000001" class="brand_code_BRAD0000001 hide">
+            <ul>
+                <li data-car_id="838">
+                	<img src="images/brandtype.jpg" alt="">奥迪A6L
+                </li>
+                <li data-car_id="837">
+                	<img src="images/brandtype.jpg" alt="">奥迪A8
+                </li>
+                <li data-car_id="834">
+                	<img src="images/brandtype.jpg" alt="">奥迪车
+                </li>
+            </ul>            
+        </div>
+        <div data-brand_id="BRAD0000011" class="brand_code_BRAD0000011 hide">
+            <ul>
+                <li data-car_id="835">
+                	<img src="images/brandtype.jpg" alt="">2
+                </li>
+                <li data-car_id="856">
+                	<img src="images/brandtype.jpg" alt="">2
+                </li>
+                <li data-car_id="888">
+                	<img src="images/brandtype.jpg" alt="">2
+                </li>
+            </ul>            
+        </div>           
+    </div>
+	<!-- 车辆具体型号结束 -->
+	<!-- 右侧关闭按钮 -->
+	<span class="closeico" id="closebL" ></span>
+	<!-- 右侧关闭按钮结束 -->
+	<script>
+		(function (){
+
+		    $('#hotlist li, .select_car_list ul li').click(function(){
+		        $("#brandList").height($(window).height() - 44);
+
+		        var brand_code = $(this).data('brand_code');
+		        $('#brandList > div').addClass('hide');
+		        $('#brandList .brand_code_'+brand_code).removeClass('hide');
+		        $('#brandList').removeClass('hide');
+		        $("#word_items").hide();
+		        $('.select_car_list').hide();
+		        $("#closebL").show();
+		        $(window).scrollTop(0);
+		    });
+
+		    $("#closebL").click(function(){
+		        $(this).addClass('hide').css({'display':'none'});
+		        $("#brandList").addClass('hide');
+		        $("#word_items").show();
+		        $('.select_car_list').show();
+		    });
+
+		    var prevPoint;
+		    $('#word_items a').on('touchstart touchmove',function (e) {
+		        e.preventDefault();
+		        var target = e.originalEvent.changedTouches[0];
+		        var realTarget = document.elementFromPoint(target.clientX, target.clientY);
+		        var $realTarget = $(realTarget);
+		        if ($realTarget.parent().attr('id') === 'word_items') {
+		            var idWord = $realTarget.attr('data-word');
+		            if (idWord !== prevPoint) {
+		                prevPoint = idWord;
+		                $('#word_center').show().html($realTarget.html());
+		                var $idWord = $('#'+idWord);
+		                var setTop = $idWord.offset().top - 45;
+		                $("html,body").stop().animate({scrollTop: setTop}, 500);
+		            }
+		        }
+		    }).on('touchend', function () {
+		        $('#word_center').hide();
+		    })
+		})();
+	</script>
+	<script type="text/javascript">
+		(function () {
+	        //车名列表点击，即选车了
+	        $('#brandList li').click(function () {
+	            var car_id = $(this).data('car_id');
+	            $.post("/wap/car/ajaxChange", { car_id: car_id }, function (rs) {
+	                if (rs.status != 1) {
+	                    alert(rs.info);
+	                } else {
+	                    window.location.href = "/Choose/car";
+	                }
+	            }, 'json');
+	        });
+	        $(".header-back").click(function () {
+	            window.location.href = "index.html";
+	            return false;
+	        });
+	    })();
+	</script>
+</body>
+</html>
